@@ -23,6 +23,14 @@ class Graph:
         self._adjacency.get(node_a, set()).discard(node_b)
         self._adjacency.get(node_b, set()).discard(node_a)
 
+    def remove_node(self, node):
+        """Completely remove a node and all its incident edges."""
+        if node in self._adjacency:
+            # Remove node from all neighbors' adjacency sets
+            for neighbor in self._adjacency[node]:
+                self._adjacency[neighbor].discard(node)
+            del self._adjacency[node]
+
     def has_edge(self, node_a, node_b):
         return node_b in self._adjacency.get(node_a, set())
 
