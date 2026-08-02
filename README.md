@@ -7,8 +7,7 @@ social_network/
     graph.py               # Graph class (adjacency list)
     network.py             # SocialNetwork class (hash table + graph)
     priority_manager.py     # PriorityManager class (heap / priority queue)
-demo.py                    # runnable demonstration of all operations
-test_social_network.py      # unittest suite (20 tests)
+test_social_network.py      # unittest suite (4 tests)
 ```
 
 ## Requirements
@@ -20,9 +19,4 @@ Python 3.8+. No third-party dependencies -- everything used
 
 ```bash
 python -m unittest test_social_network.py -v
-```
-## Running the demo
-
-```bash
-python demo.py
 ```
